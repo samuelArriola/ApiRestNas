@@ -17,13 +17,13 @@ const getRutas = async (req, res)=>{
 }
 
 const postRuta = async (req, res)=>{
-    const {nombre, ruta} = req.body;
+    const {nombre2, ruta2} = req.body;
     try {
         const pool = await conectionDwh();
         const result = await pool
             .request()
-            .input("nombre", mssql.NVarChar, nombre)
-            .input("ruta", mssql.NVarChar, ruta)
+            .input("nombre", mssql.NVarChar, nombre2)
+            .input("ruta", mssql.NVarChar, ruta2)
             .query("INSERT INTO RutasPrueba (nombre, ruta)"
                 + "VALUES (@nombre, @ruta)");
 

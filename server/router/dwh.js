@@ -1,4 +1,4 @@
-import {getRutas, postRuta} from "../controller/controllerDwh.js"
+import { getRutas, postRuta} from "../controller/controllerDwh.js"
 import express from "express";
 const app = express();
 
